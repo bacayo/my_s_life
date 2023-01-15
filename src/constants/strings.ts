@@ -1,0 +1,17 @@
+export const strings = {
+  loginButtonTitle: 'Login here',
+  signUpButtonTitle: 'Sign Up',
+  loginSignUpScreenText: 'Already have an account?',
+  remember: 'Remember me?',
+  forgotPassword: 'Forgot password',
+  singIn: 'Sign In',
+  signUp: 'Sign Up',
+  email: 'Email',
+  password: 'Password',
+  mobile: 'Mobile',
+  next: 'Next',
+  confirm: 'Confirm',
+  send: 'Send',
+  validate: 'validate',
+  new: 'new',
+};
