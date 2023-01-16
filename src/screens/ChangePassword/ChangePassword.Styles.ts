@@ -47,12 +47,15 @@ export default StyleSheet.create({
     borderRadius: 5,
     justifyContent: 'center',
     alignItems: 'center',
+    width: '100%',
   },
   signInBtnTitle: {
     fontFamily: 'Spartan-Medium',
     fontSize: 16,
     color: colors.black,
     textTransform: 'capitalize',
+    width: '200%',
+    textAlign: 'center',
   },
   bottomWrapperItemsText: {
     fontSize: 12,

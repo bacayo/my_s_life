@@ -35,7 +35,7 @@ const LoginSignup = () => {
           onPress={navigateSignUp}
           styleButton={styles.button}
           styleTitle={[styles.signUpTitle, styles.text]}
-          title={strings.signUpButtonTitle}
+          title={strings.signUp}
         />
       </View>
       <View style={styles.bottomContainer}>

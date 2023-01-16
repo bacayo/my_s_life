@@ -5,8 +5,18 @@ import UserButton from '../../components/UserButton/UserButton';
 import {strings} from '../../constants/strings';
 
 import styles from './ChangePassword.Styles';
+import {useNavigation} from '@react-navigation/native';
+import {NativeStackNavigationProp} from '@react-navigation/native-stack';
+import {RootStackParamList} from '../../infrastructure/types/nav.types';
 
 const ChangePassword = () => {
+  const navigation =
+    useNavigation<NativeStackNavigationProp<RootStackParamList>>();
+
+  const handleNavigation = () => {
+    navigation.navigate('Login');
+  };
+
   return (
     <View style={styles.container}>
       <View style={styles.textWrapper}>
@@ -17,7 +27,7 @@ const ChangePassword = () => {
           <InputBox label={strings.new + ' ' + strings.password} />
           <InputBox label={strings.confirm + ' ' + strings.password} />
           <UserButton
-            onPress={null}
+            onPress={handleNavigation}
             title={strings.validate}
             styleButton={styles.signInBtn}
             styleTitle={styles.signInBtnTitle}

@@ -1,17 +1,18 @@
 import {Checkbox} from 'react-native-paper';
 import React from 'react';
-import {colors} from '../../infrastructure/theme/colors';
 
 type Props = {
-  checked: boolean;
+  checked: boolean | null;
   setChecked: React.Dispatch<React.SetStateAction<boolean>>;
+  color: string | undefined;
+  uncheckedColor: string | undefined;
 };
 
-const CheckBox = ({checked, setChecked}: Props) => {
+const CheckBox = ({checked, setChecked, color, uncheckedColor}: Props) => {
   return (
     <Checkbox
-      color={colors.primary}
-      uncheckedColor={colors.primary}
+      color={color}
+      uncheckedColor={uncheckedColor}
       status={checked ? 'checked' : 'unchecked'}
       onPress={() => {
         setChecked(!checked);

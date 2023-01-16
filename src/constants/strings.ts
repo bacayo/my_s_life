@@ -1,11 +1,11 @@
 export const strings = {
   loginButtonTitle: 'Login here',
-  signUpButtonTitle: 'Sign Up',
+  signUpButtonTitle: 'Sign up',
   loginSignUpScreenText: 'Already have an account?',
   remember: 'Remember me?',
   forgotPassword: 'Forgot password',
   singIn: 'Sign In',
-  signUp: 'Sign Up',
+  signUp: 'Sign up',
   email: 'Email',
   password: 'Password',
   mobile: 'Mobile',

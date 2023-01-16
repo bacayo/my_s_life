@@ -8,4 +8,5 @@ export const colors = {
   white: '#ffffff',
   dark: '#754845',
   black: '#000000',
+  span: '#2f80ed',
 };

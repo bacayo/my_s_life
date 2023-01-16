@@ -54,9 +54,21 @@ const Router = () => {
             headerShown: false,
           }}
         />
-        <Stack.Screen name="SignUpDetail" component={SignUpDetail} />
+        <Stack.Screen
+          name="SignUpDetail"
+          component={SignUpDetail}
+          options={{
+            headerShown: false,
+          }}
+        />
         <Stack.Screen name="Verification" component={Verification} />
-        <Stack.Screen name="Welcome" component={Welcome} />
+        <Stack.Screen
+          name="Welcome"
+          component={Welcome}
+          options={{
+            headerShown: false,
+          }}
+        />
       </Stack.Navigator>
     </NavigationContainer>
   );
