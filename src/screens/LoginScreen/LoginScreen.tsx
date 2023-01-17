@@ -10,6 +10,7 @@ import {strings} from '../../constants/strings';
 import {useNavigation} from '@react-navigation/native';
 import {NativeStackNavigationProp} from '@react-navigation/native-stack';
 import {RootStackParamList} from '../../infrastructure/types/nav.types';
+import {colors} from '../../infrastructure/theme/colors';
 
 const LoginScreen = () => {
   const [checked, setChecked] = React.useState(false);
@@ -38,7 +39,12 @@ const LoginScreen = () => {
           <InputBox label={strings.password} />
           <View style={styles.bottomWrapper}>
             <View style={styles.bottomWrapperOptions}>
-              <CheckBox checked={checked} setChecked={setChecked} />
+              <CheckBox
+                checked={checked}
+                setChecked={setChecked}
+                color={colors.primary}
+                uncheckedColor={colors.primary}
+              />
               <Text style={styles.bottomWrapperItemsText}>
                 {strings.remember}
               </Text>

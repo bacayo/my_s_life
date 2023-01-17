@@ -10,9 +10,23 @@ import {colors} from '../../infrastructure/theme/colors';
 import CheckBox from '../../components/CheckBox/CheckBox';
 import {strings} from '../../constants/strings';
 import UserButton from '../../components/UserButton/UserButton';
+import {useNavigation} from '@react-navigation/native';
+import {NativeStackNavigationProp} from '@react-navigation/native-stack';
+import {RootStackParamList} from '../../infrastructure/types/nav.types';
 
 const SignUpDetail = () => {
   const [checked, setChecked] = useState(false);
+
+  const navigation =
+    useNavigation<NativeStackNavigationProp<RootStackParamList>>();
+
+  const handleToCNavigation = () => {
+    navigation.navigate('TermsAndConditions');
+  };
+
+  const handleWelcomeNavigation = () => {
+    navigation.navigate('Welcome');
+  };
 
   return (
     <ScrollView style={styles.container}>
@@ -69,7 +83,7 @@ const SignUpDetail = () => {
               </Text>
             </View>
             <View style={styles.bottomItemWrapper}>
-              <Icon name="users" size={30} color={colors.gray} light={true} />
+              <Icon name="users" size={30} color={colors.gray} />
               <Text style={[styles.friendsText, styles.bottomItemWrapperText]}>
                 I am here to make new friends
               </Text>
@@ -86,7 +100,9 @@ const SignUpDetail = () => {
           />
           <Text style={styles.tocWrapperText}>
             by clicking I agree to{' '}
-            <Text style={styles.tocWrapperTextSpan}>
+            <Text
+              onPress={handleToCNavigation}
+              style={styles.tocWrapperTextSpan}>
               terms & conditions privacy policy
             </Text>
           </Text>
@@ -95,7 +111,7 @@ const SignUpDetail = () => {
         <View style={styles.submitButtonWrapper}>
           <UserButton
             title={strings.signUp}
-            onPress={null}
+            onPress={handleWelcomeNavigation}
             styleButton={styles.submitBtn}
             styleTitle={styles.submitBtnTitle}
           />

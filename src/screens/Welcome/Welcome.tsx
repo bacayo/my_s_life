@@ -18,7 +18,10 @@ const Welcome = () => {
           eiusmod
         </Text>
       </View>
-      <View style={{flex: 0.2}} />
+      <View
+        style={{flex: 0.2, alignItems: 'center', justifyContent: 'flex-end'}}>
+        <Text style={styles.footerTitle}>Skip</Text>
+      </View>
     </View>
   );
 };

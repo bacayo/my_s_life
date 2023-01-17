@@ -37,4 +37,10 @@ export default StyleSheet.create({
     color: colors.darkGray,
     textAlign: 'center',
   },
+  footerTitle: {
+    color: colors.darkGray,
+    fontFamily: 'Spartan-SemiBold',
+    fontSize: 20,
+    marginBottom: 30,
+  },
 });

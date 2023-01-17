@@ -12,6 +12,7 @@ import ChangePassword from './screens/ChangePassword';
 import SignUpDetail from './screens/SignUpDetail';
 import Verification from './screens/Verification';
 import Welcome from './screens/Welcome';
+import TermsAndConditions from './screens/TermsAndConditions';
 
 const Router = () => {
   const Stack = createNativeStackNavigator<RootStackParamList>();
@@ -57,6 +58,13 @@ const Router = () => {
         <Stack.Screen
           name="SignUpDetail"
           component={SignUpDetail}
+          options={{
+            headerShown: false,
+          }}
+        />
+        <Stack.Screen
+          name="TermsAndConditions"
+          component={TermsAndConditions}
           options={{
             headerShown: false,
           }}

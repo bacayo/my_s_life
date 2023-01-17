@@ -8,4 +8,5 @@ export type RootStackParamList = {
   Verification: undefined;
   Welcome: undefined;
   LoginStack: undefined;
+  TermsAndConditions: undefined;
 };
