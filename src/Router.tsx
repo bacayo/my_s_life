@@ -69,7 +69,13 @@ const Router = () => {
             headerShown: false,
           }}
         />
-        <Stack.Screen name="Verification" component={Verification} />
+        <Stack.Screen
+          name="Verification"
+          component={Verification}
+          options={{
+            headerShown: false,
+          }}
+        />
         <Stack.Screen
           name="Welcome"
           component={Welcome}

@@ -25,7 +25,7 @@ const SignUpDetail = () => {
   };
 
   const handleWelcomeNavigation = () => {
-    navigation.navigate('Welcome');
+    navigation.navigate('Verification');
   };
 
   return (
