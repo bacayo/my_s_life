@@ -2,8 +2,18 @@ import {View, Text} from 'react-native';
 import React from 'react';
 
 import styles from './Welcome.Styles';
+import {useNavigation} from '@react-navigation/native';
+import {NativeStackNavigationProp} from '@react-navigation/native-stack';
+import {RootStackParamList} from '../../infrastructure/types/nav.types';
 
 const Welcome = () => {
+  const navigation =
+    useNavigation<NativeStackNavigationProp<RootStackParamList>>();
+
+  const handleNavigation = () => {
+    navigation.navigate('Tab');
+  };
+
   return (
     <View style={styles.container}>
       <View style={styles.headerWrapper}>
@@ -20,7 +30,9 @@ const Welcome = () => {
       </View>
       <View
         style={{flex: 0.2, alignItems: 'center', justifyContent: 'flex-end'}}>
-        <Text style={styles.footerTitle}>Skip</Text>
+        <Text onPress={handleNavigation} style={styles.footerTitle}>
+          Skip
+        </Text>
       </View>
     </View>
   );
