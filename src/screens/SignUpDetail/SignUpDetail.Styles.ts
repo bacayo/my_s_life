@@ -135,7 +135,7 @@ export default StyleSheet.create({
     justifyContent: 'flex-start',
   },
   tocWrapperText: {
-    color: colors.gray,
+    color: colors.darkGray,
     fontSize: 16,
     fontFamily: 'Spartan-Medium',
     width: '70%',

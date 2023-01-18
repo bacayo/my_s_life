@@ -20,7 +20,6 @@ export default StyleSheet.create({
   },
   inputWrapper: {
     flex: 0.7,
-
     marginHorizontal: 15,
   },
   button: {
