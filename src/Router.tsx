@@ -13,6 +13,7 @@ import SignUpDetail from './screens/SignUpDetail';
 import Verification from './screens/Verification';
 import Welcome from './screens/Welcome';
 import TermsAndConditions from './screens/TermsAndConditions';
+import BottomTab from './navigation/BottomTab';
 
 const Router = () => {
   const Stack = createNativeStackNavigator<RootStackParamList>();
@@ -79,6 +80,14 @@ const Router = () => {
         <Stack.Screen
           name="Welcome"
           component={Welcome}
+          options={{
+            headerShown: false,
+          }}
+        />
+        {/* Bottom Tab Navigation */}
+        <Stack.Screen
+          name="Tab"
+          component={BottomTab}
           options={{
             headerShown: false,
           }}

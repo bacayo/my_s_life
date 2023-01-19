@@ -9,4 +9,16 @@ export type RootStackParamList = {
   Welcome: undefined;
   LoginStack: undefined;
   TermsAndConditions: undefined;
+  Tab: undefined;
+};
+
+export type RootTabParamList = {
+  FeedStack: undefined;
+  MapStack: undefined;
+  EventStack: undefined;
+  ChatStack: undefined;
+};
+
+export type FeedStackParamList = {
+  Feed: undefined;
 };
