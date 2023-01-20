@@ -1,10 +1,10 @@
 import React from 'react';
 import {createBottomTabNavigator} from '@react-navigation/bottom-tabs';
 import {RootTabParamList} from '../infrastructure/types/nav.types';
-import Feed from '../screens/Feed';
 import MapStack from './MapStack';
 import EventStack from './EventStack';
 import ChatListStack from './ChatListStack';
+import FeedStack from './FeedStack';
 
 import SvgIcon from '../components/IconComponent/SvgIcon';
 import {RouteProp} from '@react-navigation/native';
@@ -42,7 +42,7 @@ const BottomTab = () => {
       })}>
       <Tab.Screen
         name="FeedStack"
-        component={Feed}
+        component={FeedStack}
         options={{
           headerShown: false,
         }}

@@ -21,4 +21,10 @@ export type RootTabParamList = {
 
 export type FeedStackParamList = {
   Feed: undefined;
+  UserProfile: {
+    name: string;
+    id: number;
+    disease: string;
+    age: number;
+  };
 };

@@ -7,8 +7,7 @@ export const ItemSeperator = () => {
 
 const styles = StyleSheet.create({
   line: {
-    width: 100,
-    height: 100,
-    backgroundColor: 'red',
+    backgroundColor: '#DADADA',
+    height: 1,
   },
 });
