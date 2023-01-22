@@ -3,13 +3,13 @@ import React from 'react';
 import {DataInterface} from '../../data/profileData';
 // import ArrowRight from '../IconComponent/ArrowRight';
 import {ArrowRight} from '../IconComponent';
-import Icon from 'react-native-vector-icons/FontAwesome5';
 
 import styles from './ProfileCard.Styles';
-import SvgLikesLogo from '../IconComponent/LikesLogo';
 import {useNavigation} from '@react-navigation/native';
 import {FeedStackParamList} from '../../infrastructure/types/nav.types';
 import {NativeStackNavigationProp} from '@react-navigation/native-stack';
+import Socials from './components/Socials';
+import Disease from './components/Disease';
 
 const ProfileCard = ({
   name,
@@ -32,6 +32,9 @@ const ProfileCard = ({
       name,
       disease,
       age,
+      lastSeen,
+      likes,
+      reply,
     });
   };
 
@@ -62,15 +65,9 @@ const ProfileCard = ({
       </View>
       {/* Footer */}
       <View style={styles.footer}>
-        <View style={styles.social}>
-          <SvgLikesLogo />
-          <Text style={styles.likes}>{likes}K</Text>
-          <Icon name="comment" size={14} />
-          <Text style={styles.likes}>{reply}</Text>
-        </View>
-        <View style={styles.diseaseWrapper}>
-          <Text style={styles.disease}>{disease}</Text>
-        </View>
+        {/* Social */}
+        <Socials likes={likes} reply={reply} />
+        <Disease disease={disease} />
       </View>
     </View>
   );

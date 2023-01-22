@@ -26,5 +26,8 @@ export type FeedStackParamList = {
     id: number;
     disease: string;
     age: number;
+    lastSeen: string;
+    likes: number;
+    reply: number;
   };
 };

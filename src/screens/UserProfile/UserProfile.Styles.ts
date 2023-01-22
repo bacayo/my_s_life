@@ -49,4 +49,20 @@ export default StyleSheet.create({
     gap: 10,
     alignItems: 'center',
   },
+  name: {
+    color: colors.darkGray,
+    fontFamily: 'Spartan-SemiBold',
+    fontSize: 14,
+  },
+  lastSeen: {
+    color: '#9a9a9a',
+    fontFamily: 'Spartan-Medium',
+    fontSize: 12,
+  },
+  post: {
+    color: colors.gray,
+    fontFamily: 'Spartan-Medium',
+    fontSize: 14,
+    lineHeight: 20,
+  },
 });

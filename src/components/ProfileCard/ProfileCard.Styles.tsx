@@ -53,11 +53,6 @@ export default StyleSheet.create({
     lineHeight: 20,
     fontFamily: 'Spartan-Medium',
   },
-  likes: {
-    fontSize: 14,
-    fontFamily: 'Spartan-Medium',
-    color: colors.darkGray,
-  },
   footer: {
     flexDirection: 'row',
     alignItems: 'center',

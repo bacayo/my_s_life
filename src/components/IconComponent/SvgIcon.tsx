@@ -10,6 +10,7 @@ import {
   Profilebg,
   Cycle,
   Calendar,
+  LikesLogo,
 } from '.';
 import SvgArrowLeft from './ArrowLeft';
 
@@ -33,6 +34,7 @@ const icon: any = {
   profileBG: Profilebg,
   cycle: Cycle,
   calendar: Calendar,
+  likes: LikesLogo,
 };
 
 export default function IconSvg(props: Props) {
