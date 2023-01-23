@@ -3,7 +3,7 @@ import {colors} from '../../infrastructure/theme/colors';
 
 export default StyleSheet.create({
   container: {
-    flex: 1,
+    // flex: 1,
     backgroundColor: colors.white,
   },
 
@@ -13,7 +13,7 @@ export default StyleSheet.create({
     justifyContent: 'flex-start',
     alignItems: 'center',
     gap: 10,
-    marginTop: '5%',
+    marginTop: '10%',
   },
   midContentHeader: {
     color: colors.dark,
@@ -64,5 +64,25 @@ export default StyleSheet.create({
     fontFamily: 'Spartan-Medium',
     fontSize: 14,
     lineHeight: 20,
+  },
+  contentWrapper: {
+    flex: 1,
+    gap: 40,
+  },
+  userPostContainer: {
+    flexDirection: 'row',
+    justifyContent: 'flex-start',
+    alignItems: 'center',
+    gap: 16,
+    paddingVertical: 8,
+  },
+  userPostContainerHeader: {
+    flexDirection: 'row',
+    flex: 1,
+    gap: 10,
+  },
+  socialsWrapper: {
+    flexDirection: 'row',
+    paddingVertical: 8,
   },
 });

@@ -11,8 +11,9 @@ import {
   Cycle,
   Calendar,
   LikesLogo,
+  ChevronDown,
+  ArrowLeft,
 } from '.';
-import SvgArrowLeft from './ArrowLeft';
 
 type Props = {
   width: number;
@@ -28,13 +29,14 @@ const icon: any = {
   event: Event,
   home: HomeIcon,
   map: Map,
-  arrowLeft: SvgArrowLeft,
   pp: ProfilePhoto,
   arrowRight: ArrowRight,
+  arrowLeft: ArrowLeft,
   profileBG: Profilebg,
   cycle: Cycle,
   calendar: Calendar,
   likes: LikesLogo,
+  chevronDown: ChevronDown,
 };
 
 export default function IconSvg(props: Props) {

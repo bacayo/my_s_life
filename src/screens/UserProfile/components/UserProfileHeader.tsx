@@ -25,8 +25,9 @@ const UserProfileHeader = ({name}: Props) => {
 
 const styles = StyleSheet.create({
   container: {
-    flex: 0.3,
-    backgroundColor: 'green',
+    // flex: 0.3,
+    // height: 200,
+    height: '100%',
   },
   profileHeaderWrapper: {
     justifyContent: 'center',

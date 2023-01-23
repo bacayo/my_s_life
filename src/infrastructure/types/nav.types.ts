@@ -17,6 +17,7 @@ export type RootTabParamList = {
   MapStack: undefined;
   EventStack: undefined;
   ChatStack: undefined;
+  GalleryStack: undefined;
 };
 
 export type FeedStackParamList = {
@@ -29,5 +30,11 @@ export type FeedStackParamList = {
     lastSeen: string;
     likes: number;
     reply: number;
+  };
+  EditProfile: {
+    name: string;
+    id: number;
+    disease: string;
+    age: number;
   };
 };

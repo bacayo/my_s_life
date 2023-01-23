@@ -8,14 +8,17 @@ import FeedStack from './FeedStack';
 
 import SvgIcon from '../components/IconComponent/SvgIcon';
 import {RouteProp} from '@react-navigation/native';
+import GalleryStack from './GalleryStack';
 
 const Tab = createBottomTabNavigator<RootTabParamList>();
 
 type Props = {
   route: RouteProp<RootTabParamList, keyof RootTabParamList>;
+  width: number;
+  height: number;
 };
 
-const TabBarIcon = ({route}: Props) => {
+const TabBarIcon = ({route, height, width}: Props) => {
   let iconName: string = '';
 
   if (route.name === 'FeedStack') {
@@ -26,8 +29,11 @@ const TabBarIcon = ({route}: Props) => {
     iconName = 'chat';
   } else if (route.name === 'EventStack') {
     iconName = 'event';
+  } else if (route.name === 'GalleryStack') {
+    iconName = 'mid';
   }
-  return <SvgIcon name={iconName} width={24} height={24} />;
+
+  return <SvgIcon name={iconName} width={width} height={height} />;
 };
 
 const BottomTab = () => {
@@ -36,7 +42,7 @@ const BottomTab = () => {
       screenOptions={({route}) => ({
         //! look for warning
         tabBarIcon: () => {
-          return <TabBarIcon route={route} />;
+          return <TabBarIcon route={route} width={24} height={24} />;
         },
         tabBarShowLabel: false,
       })}>
@@ -48,6 +54,16 @@ const BottomTab = () => {
         }}
       />
       <Tab.Screen name="MapStack" component={MapStack} />
+      <Tab.Screen
+        name="GalleryStack"
+        component={GalleryStack}
+        options={({route}) => ({
+          tabBarIcon: () => {
+            return <TabBarIcon route={route} width={50} height={50} />;
+          },
+          headerShown: false,
+        })}
+      />
       <Tab.Screen name="EventStack" component={EventStack} />
       <Tab.Screen name="ChatStack" component={ChatListStack} />
     </Tab.Navigator>

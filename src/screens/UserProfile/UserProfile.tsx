@@ -1,6 +1,9 @@
 import {View, Text, ScrollView} from 'react-native';
 import React from 'react';
-import {NativeStackScreenProps} from '@react-navigation/native-stack';
+import {
+  NativeStackNavigationProp,
+  NativeStackScreenProps,
+} from '@react-navigation/native-stack';
 import DotsHorizontal from 'react-native-vector-icons/MaterialCommunityIcons';
 
 import {FeedStackParamList} from '../../infrastructure/types/nav.types';
@@ -14,19 +17,34 @@ import IconSvg from '../../components/IconComponent/SvgIcon';
 import {colors} from '../../infrastructure/theme/colors';
 import Socials from '../../components/ProfileCard/components/Socials';
 import Disease from '../../components/ProfileCard/components/Disease';
+import {useNavigation} from '@react-navigation/native';
 
 type Props = NativeStackScreenProps<FeedStackParamList, 'UserProfile'>;
 
 const UserProfile = ({route}: Props) => {
-  const {name, age, lastSeen, likes, reply, disease} = route.params;
+  const {name, age, lastSeen, likes, reply, disease, id} = route.params;
+  const navigation =
+    useNavigation<NativeStackNavigationProp<FeedStackParamList>>();
+
+  // Navigate to edit profile
+  const handleNavigation = () => {
+    navigation.push('EditProfile', {
+      disease,
+      name,
+      id,
+      age,
+    });
+  };
 
   return (
-    <View style={styles.container}>
+    <ScrollView showsVerticalScrollIndicator={false} style={styles.container}>
       {/* Navbar */}
       <Navbar navbarText={name} />
       {/* Header background , profile photo , name */}
-      <View style={{flex: 1, gap: 40}}>
-        <UserProfileHeader name={name} />
+      <View style={styles.contentWrapper}>
+        <View style={{height: 200}}>
+          <UserProfileHeader name={name} />
+        </View>
         {/* Mid content */}
         <View style={styles.midContentWrapper}>
           <Text style={styles.midContentHeader}>
@@ -48,26 +66,15 @@ const UserProfile = ({route}: Props) => {
           </View>
           {/* Edit Profile Button */}
           <UserButton
-            onPress={null}
+            onPress={handleNavigation}
             styleButton={styles.btn}
             styleTitle={styles.btnTitle}
             title="Edit Profile"
           />
-          <ScrollView showsVerticalScrollIndicator={false}>
-            <View
-              style={{
-                flexDirection: 'row',
-                justifyContent: 'flex-start',
-                alignItems: 'center',
-                gap: 16,
-                paddingVertical: 8,
-              }}>
-              <View
-                style={{
-                  flexDirection: 'row',
-                  flex: 1,
-                  gap: 10,
-                }}>
+          <View>
+            {/* User post */}
+            <View style={styles.userPostContainer}>
+              <View style={styles.userPostContainerHeader}>
                 <IconSvg name="pp" width={40} height={40} />
                 <View>
                   <Text style={styles.name}>{name}</Text>
@@ -87,14 +94,14 @@ const UserProfile = ({route}: Props) => {
               industry. Lorem Ipsum has been the industry's standard dummy text
               ever since the 1500s.
             </Text>
-            <View style={{flexDirection: 'row', paddingVertical: 8}}>
+            <View style={styles.socialsWrapper}>
               <Socials likes={likes} reply={reply} />
               <Disease disease={disease} />
             </View>
-          </ScrollView>
+          </View>
         </View>
       </View>
-    </View>
+    </ScrollView>
   );
 };
 

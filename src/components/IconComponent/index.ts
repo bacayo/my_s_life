@@ -3,6 +3,7 @@ export {default as ArrowRight} from './ArrowRight';
 export {default as Calendar} from './Calendar';
 export {default as Chatlist} from './Chatlist';
 export {default as Cycle} from './Cycle';
+export {default as ChevronDown} from './ChevronDown';
 export {default as Event} from './Event';
 export {default as HomeIcon} from './HomeIcon';
 export {default as LikesLogo} from './LikesLogo';
