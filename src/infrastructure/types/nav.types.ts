@@ -42,4 +42,5 @@ export type FeedStackParamList = {
 export type TagStackParamList = {
   Tag: undefined;
   Gallery: undefined;
+  Camera: undefined;
 };

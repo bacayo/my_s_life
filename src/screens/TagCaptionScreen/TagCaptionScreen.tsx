@@ -39,7 +39,7 @@ const TagCaptionScreen = () => {
       {/* Content */}
       <View style={styles.content}>
         {/* Icons */}
-        <GalleryIconCard onPress={handleGalleryNavigation} />
+        <GalleryIconCard onAddPhoto={handleGalleryNavigation} />
         {/* Inputs */}
         <View style={{gap: 10}}>
           <TagCaptionInputBox placeholder="Caption" icon="" showIcon={false} />
