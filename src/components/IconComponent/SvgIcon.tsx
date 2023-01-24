@@ -13,6 +13,10 @@ import {
   LikesLogo,
   ChevronDown,
   ArrowLeft,
+  AddPhoto,
+  Camera,
+  T,
+  Cross,
 } from '.';
 
 type Props = {
@@ -37,6 +41,10 @@ const icon: any = {
   calendar: Calendar,
   likes: LikesLogo,
   chevronDown: ChevronDown,
+  addPhoto: AddPhoto,
+  camera: Camera,
+  t: T,
+  cross: Cross,
 };
 
 export default function IconSvg(props: Props) {

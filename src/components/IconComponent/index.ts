@@ -1,9 +1,12 @@
+export {default as AddPhoto} from './AddPhoto';
 export {default as ArrowLeft} from './ArrowLeft';
 export {default as ArrowRight} from './ArrowRight';
 export {default as Calendar} from './Calendar';
+export {default as Camera} from './Camera';
 export {default as Chatlist} from './Chatlist';
 export {default as Cycle} from './Cycle';
 export {default as ChevronDown} from './ChevronDown';
+export {default as Cross} from './Cross';
 export {default as Event} from './Event';
 export {default as HomeIcon} from './HomeIcon';
 export {default as LikesLogo} from './LikesLogo';
@@ -11,3 +14,4 @@ export {default as Map} from './Map';
 export {default as Mid} from './Mid';
 export {default as Profilebg} from './Profilebg';
 export {default as ProfilePhoto} from './ProfilePhoto';
+export {default as T} from './T';

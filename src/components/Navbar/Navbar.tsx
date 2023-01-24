@@ -1,32 +1,24 @@
 import {View, Text} from 'react-native';
 import React from 'react';
 import IconSvg from '../../components/IconComponent/SvgIcon';
-import {useNavigation} from '@react-navigation/native';
-import {NativeStackNavigationProp} from '@react-navigation/native-stack';
-import {FeedStackParamList} from '../../infrastructure/types/nav.types';
 
 import styles from './Navbar.Styles';
 
 type Props = {
   navbarText: string;
+  iconName: string;
+  onPress: any;
 };
 
-const Navbar = ({navbarText}: Props) => {
-  const navigation =
-    useNavigation<NativeStackNavigationProp<FeedStackParamList>>();
-
-  const handleNavbarNavigation = () => {
-    navigation.goBack();
-  };
-
+const Navbar = ({navbarText, iconName, onPress}: Props) => {
   return (
     <View style={styles.navbar}>
       <IconSvg
-        name="arrowLeft"
+        name={iconName}
         width={19}
         height={14}
         stroke="#2E3A59"
-        onPress={handleNavbarNavigation}
+        onPress={onPress}
       />
       <Text style={styles.navbarText}>{navbarText}</Text>
     </View>

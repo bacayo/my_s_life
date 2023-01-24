@@ -32,7 +32,11 @@ const EditProfile = ({route}: Props) => {
       showsVerticalScrollIndicator={false}
       style={{backgroundColor: colors.white}}>
       {/* Navbar */}
-      <Navbar navbarText={name} />
+      <Navbar
+        navbarText={name}
+        iconName="arrowLeft"
+        onPress={handleUserNavigation}
+      />
       {/* User Profile Header */}
       <View style={styles.userProfileHeaderWrapper}>
         <UserProfileHeader name={name} />

@@ -36,10 +36,19 @@ const UserProfile = ({route}: Props) => {
     });
   };
 
+  // Navbar navigation
+  const navbarNavigation = () => {
+    navigation.goBack();
+  };
+
   return (
     <ScrollView showsVerticalScrollIndicator={false} style={styles.container}>
       {/* Navbar */}
-      <Navbar navbarText={name} />
+      <Navbar
+        navbarText={name}
+        iconName="arrowLeft"
+        onPress={navbarNavigation}
+      />
       {/* Header background , profile photo , name */}
       <View style={styles.contentWrapper}>
         <View style={{height: 200}}>

@@ -4,7 +4,7 @@ import Icon from 'react-native-vector-icons/FontAwesome5';
 import {colors} from '../../../infrastructure/theme/colors';
 
 type Props = {
-  title: string;
+  title: string | undefined;
 };
 
 const Tag = ({title}: Props) => {
@@ -25,7 +25,8 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     flexDirection: 'row',
     gap: 4,
-    padding: 5,
+    paddingHorizontal: 4,
+    paddingVertical: 8,
   },
   tagTitle: {
     fontSize: 12,

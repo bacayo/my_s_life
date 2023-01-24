@@ -38,3 +38,8 @@ export type FeedStackParamList = {
     age: number;
   };
 };
+
+export type TagStackParamList = {
+  Tag: undefined;
+  Gallery: undefined;
+};
