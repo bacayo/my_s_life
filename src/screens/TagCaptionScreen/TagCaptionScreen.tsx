@@ -28,6 +28,9 @@ const TagCaptionScreen = () => {
   const handleGalleryNavigation = () => {
     galleryNavigation.navigate('Gallery');
   };
+  const handleCameraNavigation = () => {
+    galleryNavigation.navigate('Camera');
+  };
 
   return (
     <View style={styles.container}>
@@ -39,7 +42,10 @@ const TagCaptionScreen = () => {
       {/* Content */}
       <View style={styles.content}>
         {/* Icons */}
-        <GalleryIconCard onAddPhoto={handleGalleryNavigation} />
+        <GalleryIconCard
+          onAddPhoto={handleGalleryNavigation}
+          onCamera={handleCameraNavigation}
+        />
         {/* Inputs */}
         <View style={{gap: 10}}>
           <TagCaptionInputBox placeholder="Caption" icon="" showIcon={false} />

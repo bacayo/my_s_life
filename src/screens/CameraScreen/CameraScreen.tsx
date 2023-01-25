@@ -11,6 +11,7 @@ import {
 import {useNavigation} from '@react-navigation/native';
 import {NativeStackNavigationProp} from '@react-navigation/native-stack';
 import {FeedStackParamList} from '../../infrastructure/types/nav.types';
+import CameraButton from './components/CameraButton';
 
 const CameraScreen = () => {
   // const devices = useCameraDevices('wide-angle-camera');
@@ -58,12 +59,8 @@ const CameraScreen = () => {
         isActive={true}
         enableZoomGesture
       />
-      <View style={styles.cameraButtonWrapper}>
-        <View style={styles.cameraButtonTitleWrapper}>
-          <Text style={styles.buttonTitle}>Add Photo</Text>
-        </View>
-        <View style={styles.cameraButton} />
-      </View>
+      {/* Camera Button */}
+      <CameraButton />
     </View>
   );
 };
