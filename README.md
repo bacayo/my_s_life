@@ -23,7 +23,7 @@
 - [React Navigation V6](https://reactnavigation.org/)
 - [React Native Vision Camera](https://mrousavy.com/react-native-vision-camera/)
 - [Some icons used from vector icons](https://github.com/oblador/react-native-vector-icons)
-- [SVGR transform SVG to components](https://react-svgr.com/)
+- [SVGR transform SVG into React components](https://react-svgr.com/)
 - [React Native Paper used for checkboxes](https://reactnativepaper.com/)
 
 ### Running the application
