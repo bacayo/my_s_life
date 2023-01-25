@@ -15,6 +15,7 @@ import Tag from '../SignUpDetail/components/Tag';
 import AddNewTag from './components/AddNewTag';
 import UserButton from '../../components/UserButton/UserButton';
 import {useNavigation} from '@react-navigation/native';
+import {strings} from '../../constants/strings';
 
 type Props = NativeStackScreenProps<FeedStackParamList, 'EditProfile'>;
 
@@ -59,21 +60,19 @@ const EditProfile = ({route}: Props) => {
         <EditProfileInputBox
           icon={false}
           iconName=""
-          title={'My message to My S Life Community'}
+          title={strings.mySLifeMessage}
           titleColor={colors.dark}
         />
         <EditProfileInputBox
           icon={false}
           iconName=""
-          title={
-            ' line description will be here. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do'
-          }
+          title={strings.loremIpsum}
           titleColor={colors.gray}
         />
         {/* Tags */}
         <View style={styles.diseaseWrapper}>
-          <Tag title="Menopause" />
-          <Tag title="Pre-Menopause" />
+          <Tag title={strings.menopause} />
+          <Tag title={strings.preMenopause} />
         </View>
         <AddNewTag iconName="plus" />
         <EditProfileInputBox
@@ -92,7 +91,7 @@ const EditProfile = ({route}: Props) => {
         />
         <View style={styles.btnWrapper}>
           <UserButton
-            title="Save"
+            title={strings.save}
             styleButton={styles.btn}
             styleTitle={styles.btnTitle}
             onPress={handleUserNavigation}

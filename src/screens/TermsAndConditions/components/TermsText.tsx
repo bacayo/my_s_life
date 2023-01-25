@@ -1,15 +1,10 @@
 import {Text, StyleSheet} from 'react-native';
 import React from 'react';
 import {colors} from '../../../infrastructure/theme/colors';
+import {strings} from '../../../constants/strings';
 
 const TermsText = () => {
-  return (
-    <Text style={styles.text}>
-      Lorem Ipsum is simply dummy text of the printing and typesetting industry.
-      Lorem Ipsum has been the industry's standard dummy text ever since the
-      1500s
-    </Text>
-  );
+  return <Text style={styles.text}>{strings.loremUpsumLarge}</Text>;
 };
 
 const styles = StyleSheet.create({

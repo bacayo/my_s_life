@@ -12,6 +12,7 @@ import {
   TagStackParamList,
 } from '../../infrastructure/types/nav.types';
 import GalleryIconCard from '../../components/GalleryIconCard';
+import {strings} from '../../constants/strings';
 
 const TagCaptionScreen = () => {
   const feedNavigation =
@@ -63,7 +64,7 @@ const TagCaptionScreen = () => {
         </View>
         {/* Post button */}
         <UserButton
-          title="Post"
+          title={strings.post}
           styleButton={styles.btn}
           styleTitle={styles.btnTitle}
           onPress={null}

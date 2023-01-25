@@ -1,7 +1,6 @@
 import {View, Text, Image} from 'react-native';
 import React from 'react';
 import {DataInterface} from '../../data/profileData';
-// import ArrowRight from '../IconComponent/ArrowRight';
 import {ArrowRight} from '../IconComponent';
 
 import styles from './ProfileCard.Styles';

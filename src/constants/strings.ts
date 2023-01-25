@@ -12,6 +12,21 @@ export const strings = {
   next: 'Next',
   confirm: 'Confirm',
   send: 'Send',
-  validate: 'validate',
+  validate: 'Validate',
   new: 'new',
+  photo: 'Photo',
+  mySLifeMessage: 'My message to My S Life Community',
+  loremIpsum:
+    'line description will be here. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do',
+  loremUpsumLarge:
+    'Lorem Ipsum is simply dummy text of the printing and typesetting industry.Lorem Ipsum has been the industrys standard dummy text ever since the 1500s',
+  menopause: 'Menopause',
+  preMenopause: 'Pre-Menopause',
+  save: 'Save',
+  post: 'Post',
+  editProfile: 'Edit Profile',
+  verificationMessage:
+    'A verification code has been sent to your registered phone number.Please enter the number below',
+  confirmCodeMessage: "You haven't received the code ?",
+  companyName: 'My S Life',
 };

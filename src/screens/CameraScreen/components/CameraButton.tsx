@@ -1,11 +1,13 @@
 import {View, Text, StyleSheet} from 'react-native';
 import React from 'react';
+import {colors} from '../../../infrastructure/theme/colors';
+import {strings} from '../../../constants/strings';
 
 const CameraButton = () => {
   return (
     <View style={styles.cameraButtonWrapper}>
       <View style={styles.cameraButtonTitleWrapper}>
-        <Text style={styles.buttonTitle}>Add Photo</Text>
+        <Text style={styles.buttonTitle}>{strings.photo}</Text>
       </View>
       <View style={styles.cameraButton} />
     </View>
@@ -26,19 +28,21 @@ const styles = StyleSheet.create({
     paddingHorizontal: 18,
     paddingVertical: 4,
     alignSelf: 'center',
-    borderRadius: 25,
+    borderRadius: 13,
   },
   buttonTitle: {
-    color: 'white',
+    color: colors.white,
+    fontFamily: 'Spartan-Semibold',
+    fontSize: 14,
     textAlign: 'center',
   },
   cameraButton: {
     width: 50,
     height: 50,
-    backgroundColor: 'white',
+    backgroundColor: colors.white,
     borderRadius: 50,
     borderWidth: 2,
-    borderColor: 'black',
+    borderColor: colors.black,
   },
 });
 

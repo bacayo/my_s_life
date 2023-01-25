@@ -18,6 +18,7 @@ import {colors} from '../../infrastructure/theme/colors';
 import Socials from '../../components/ProfileCard/components/Socials';
 import Disease from '../../components/ProfileCard/components/Disease';
 import {useNavigation} from '@react-navigation/native';
+import {strings} from '../../constants/strings';
 
 type Props = NativeStackScreenProps<FeedStackParamList, 'UserProfile'>;
 
@@ -59,14 +60,11 @@ const UserProfile = ({route}: Props) => {
           <Text style={styles.midContentHeader}>
             my message to my s life community
           </Text>
-          <Text style={styles.description}>
-            line description will be here. Lorem ipsum dolor sit amet,
-            consectetur adipisicing elit, sed do
-          </Text>
+          <Text style={styles.description}>{strings.loremIpsum}</Text>
           {/* Tags */}
           <View style={styles.tagWrapper}>
-            <Tag title="Menopause" />
-            <Tag title="Pre-menopause" />
+            <Tag title={strings.menopause} />
+            <Tag title={strings.preMenopause} />
           </View>
           {/* Age and date */}
           <View style={styles.profileInfoWrapper}>
@@ -78,7 +76,7 @@ const UserProfile = ({route}: Props) => {
             onPress={handleNavigation}
             styleButton={styles.btn}
             styleTitle={styles.btnTitle}
-            title="Edit Profile"
+            title={strings.editProfile}
           />
           <View>
             {/* User post */}
@@ -98,11 +96,7 @@ const UserProfile = ({route}: Props) => {
                 />
               </View>
             </View>
-            <Text style={styles.post}>
-              Lorem Ipsum is simply dummy text of the printing and typesetting
-              industry. Lorem Ipsum has been the industry's standard dummy text
-              ever since the 1500s.
-            </Text>
+            <Text style={styles.post}>{strings.loremUpsumLarge}</Text>
             <View style={styles.socialsWrapper}>
               <Socials likes={likes} reply={reply} />
               <Disease disease={disease} />

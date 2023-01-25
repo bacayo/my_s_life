@@ -7,6 +7,7 @@ import UserButton from '../../components/UserButton/UserButton';
 import {useNavigation} from '@react-navigation/native';
 import {NativeStackNavigationProp} from '@react-navigation/native-stack';
 import {RootStackParamList} from '../../infrastructure/types/nav.types';
+import {strings} from '../../constants/strings';
 
 const Verification = () => {
   const navigation =
@@ -27,8 +28,7 @@ const Verification = () => {
         {/* Content */}
         <View style={styles.contentWrapper}>
           <Text style={styles.verificationMessage}>
-            A verification code has been sent to your registered phone number.
-            Please enter the number below
+            {strings.verificationMessage}
           </Text>
           {/* Input boxes */}
           <View style={styles.boxContainer}>
@@ -40,7 +40,7 @@ const Verification = () => {
           {/* Message */}
           <View style={styles.messageWrapper}>
             <Text style={styles.verificationMessage}>
-              You haven't received the code ?
+              {strings.confirmCodeMessage}
             </Text>
             <Text style={[styles.verificationMessage, styles.questionText]}>
               Send it again
@@ -49,7 +49,7 @@ const Verification = () => {
           {/* Validation button */}
           <UserButton
             onPress={handleNavigation}
-            title="Validate"
+            title={strings.validate}
             styleButton={styles.valBtn}
             styleTitle={styles.valBtnTitle}
           />
